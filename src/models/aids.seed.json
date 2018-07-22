@@ -1,0 +1,26 @@
+[
+  {
+    "make": "Resound",
+    "style": "RIC",
+    "model": "Linx 3D 61",
+    "ioiha": 32
+  },
+  {
+    "make": "Phonak",
+    "style": "BTE",
+    "model": "Bolero B90-R",
+    "ioiha": 30
+  },
+  {
+    "make": "Signia",
+    "style": "RIC",
+    "model": "Pure 7NX",
+    "ioiha": 23
+  },
+  {
+    "make": "Starkey",
+    "style": "Half Shell",
+    "model": "Muse IQ",
+    "ioiha": 20
+  }
+]

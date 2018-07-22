@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hearing Aid Project</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+
+  <body>
+    <!-- As a heading -->
+    <div class="container" id="header">
+      <h1 class="text-center">Track Your Hearing Aid Outcome Measures</h1>
+    </div>
+
+    <div class="parallax"></div>
+
+    <!-- <div class="container">
+      <div class="container">
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Make</th>
+              <th scope="col">Average IOIHA</th>
+            </tr>
+          </thead>
+          <tbody id="list-table-average" class="table-striped table-hover">
+          </tbody>
+        </table>
+      </div>
+    </div> -->
+
+    <div class="jumbotron jumbotron-fluid">
+      <div class="container">
+        <h3 class="text-center">Enter new Outcome</h3>
+        <div class="text-center">
+        <button type="button" class="btn btn-success" id="formButton">Entry Form</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="form-container" class="panel padding">
+      <form method='POST' action='/api/heaingaids'>
+        <legend id="form-label">Entry Form</legend>
+        <input type="hidden" id="aid-id" value="" />
+        <div class="form-group">
+          <label for="makeSelect">Make</label>
+          <select class="form-control" id="makeSelect">
+            <option>Select a Hearing aid Make</option>
+            <option>Resound</option>
+            <option>Signia</option>
+            <option>Starkey</option>
+            <option>Oticon</option>
+            <option>Phonak</option>
+            <option>Widex</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="styleSelect">Style</label>
+          <select class="form-control" id="styleSelect">
+            <option>Select a Hearing aid Style</option>
+            <option>CIC</option>
+            <option>ITC</option>
+            <option>HS</option>
+            <option>FS</option>
+            <option>RIC</option>
+            <option>BTE</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="modelTextarea">Model</label>
+          <textarea class="form-control" id="modelTextarea" rows="1"></textarea>
+        </div>
+        <div class="form-group">
+          <label for="ioihaTextarea">IOIHA Score</label>
+          <textarea class="form-control" id="ioihaTextarea" rows="1"></textarea>
+        </div>
+        <button type="button" onclick="submitHAForm()" class="btn btn-success">Submit</button>
+        <button type="button" onclick="cancelHAForm()" class="btn btn-link" id="cancelForm">cancel</button>
+      </form>
+    </div>
+
+    <div class="container">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Make</th>
+            <th scope="col">Style</th>
+            <th scope="col">Model</th>
+            <th scope="col">IOIHA Score</th>
+          </tr>
+        </thead>
+        <tbody id="list-table-content" class="table-striped table-hover">
+        </tbody>
+      </table>
+    </div>
+
+    <script>
+      $(document).ready(function() {
+        $('#formButton').on('click', () => {
+           showAddAidForm();
+        });
+
+        hideHAForm();
+        refreshAidsList();
+        setForm();
+        //averageByMake();
+        getHAScore();
+      });
+    </script>
+
+    <div class="container-fluid mb-0">
+      <footer>
+        <h4 class="text-center">Created By: Amanda Gray-Baum</h4>
+        <p class="text-center">&copy 2018</p>
+      </footer>
+    </div>
+
+    <script src="/js/app.js"></script>
+  </body>
+</html>
