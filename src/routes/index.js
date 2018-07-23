@@ -41,7 +41,6 @@ router.post('/hearingaids', (req, res, next) => {
 
 router.put('/hearingaids/:aidId', (req, res, next) => {
   const {aidId} = req.params;
-  console.log(aidId);
 
   aids.findById(aidId, function (err, aids) {
     if (err) {

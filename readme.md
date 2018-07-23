@@ -1,4 +1,4 @@
-#IOI-HA Outcome Tracker
+###IOI-HA Outcome Tracker
 
 ## Project Description:
 
@@ -23,13 +23,24 @@ treatment is working best for my patients.
 
 ## Instructions for running the app:
 
-You cannot gain access to the mongodb without firts adding the .env file to the
+You cannot gain access to the mongodb without first adding the .env file to the
 root directory.  The .env file will be emailed to individuals who require access.
 
 **To Run the App**
 
   1. Ensure you have node.js installed on your computer
   2. Go to the root directly of the project
-  3. Run **npm install** to install necessary packages
-  4. Run **npm start** to begin the app server process
-  5. Open your browser to localhost:3000 to run the app
+  3. Clone or download the project from the repo.
+  4. Run **npm install** to install necessary packages
+  5. Add a .env file to the root of project and include information sent over private communications
+  6. Run **npm start** to begin the app server process
+  7. Open your browser to localhost:3000 to run the app
+
+## Future Directions for this project
+
+  1. Display average IOIHA score based on hearing aid Make
+  2. Display average IOIHA score based on hearing aid style
+  3. Add audiometric thresholds and speech discrimination scores to database
+  4. Display average IOIHA score based on pure tone averages
+  5. Display average IOIHA score based on speech discrimination scores
+  6. . . . the possibilities are endless.  
