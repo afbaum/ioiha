@@ -45,37 +45,41 @@
       <form method='POST' action='/api/heaingaids'>
         <legend id="form-label">Entry Form</legend>
         <input type="hidden" id="aid-id" value="" />
-        <div class="form-group">
-          <label for="makeSelect">Make</label>
-          <select class="form-control" id="makeSelect">
-            <option>Select a Hearing aid Make</option>
-            <option>Resound</option>
-            <option>Signia</option>
-            <option>Starkey</option>
-            <option>Oticon</option>
-            <option>Phonak</option>
-            <option>Widex</option>
-          </select>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="makeSelect">Make</label>
+            <select class="form-control" id="makeSelect">
+              <option>Select a Hearing aid Make</option>
+              <option>Resound</option>
+              <option>Signia</option>
+              <option>Starkey</option>
+              <option>Oticon</option>
+              <option>Phonak</option>
+              <option>Widex</option>
+            </select>
+          </div>
+          <div class="col-sm-6">
+            <label for="styleSelect">Style</label>
+            <select class="form-control" id="styleSelect">
+              <option>Select a Hearing aid Style</option>
+              <option>CIC</option>
+              <option>ITC</option>
+              <option>HS</option>
+              <option>FS</option>
+              <option>RIC</option>
+              <option>BTE</option>
+            </select>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="styleSelect">Style</label>
-          <select class="form-control" id="styleSelect">
-            <option>Select a Hearing aid Style</option>
-            <option>CIC</option>
-            <option>ITC</option>
-            <option>HS</option>
-            <option>FS</option>
-            <option>RIC</option>
-            <option>BTE</option>
-          </select>
-        </div>
-        <div class="form-group">
-          <label for="modelTextarea">Model</label>
-          <textarea class="form-control" id="modelTextarea" rows="1"></textarea>
-        </div>
-        <div class="form-group">
-          <label for="ioihaTextarea">IOIHA Score</label>
-          <textarea class="form-control" id="ioihaTextarea" rows="1"></textarea>
+        <div class="form-group row">
+          <div class="col-sm-6">
+            <label for="modelTextarea">Model</label>
+            <textarea class="form-control" id="modelTextarea" rows="1"></textarea>
+          </div>
+          <div class="col-sm-6">
+            <label for="ioihaTextarea">IOIHA Score</label>
+            <textarea class="form-control" id="ioihaTextarea" rows="1"></textarea>
+          </div>
         </div>
         <button type="button" onclick="submitHAForm()" class="btn btn-success">Submit</button>
         <button type="button" onclick="cancelHAForm()" class="btn btn-link" id="cancelForm">cancel</button>
